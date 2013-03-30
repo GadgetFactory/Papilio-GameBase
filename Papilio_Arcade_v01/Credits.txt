@@ -1,0 +1,3 @@
+Created by GBToolbox v1.3 on Saturday 23 March 2013 by Unknown!
+
+If you're the creator of this GameBase database, put your credits in this file (credits.txt).

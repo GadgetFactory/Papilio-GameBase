@@ -1,0 +1,170 @@
+You can customise most of the Graphics that appear in GameBase by replacing the default images with your own ones. The filenames in this folder must stay the same as the defaults (Below) for GameBase to recognise them. Currently it is possible to use your own images in place of the following defaults: -
+
+
+
+
+
+AboutScreen_120x200.gif
+
+This image is displayed in the 'GameBase' tab of the GameBase About Screen. It should be 120 pixels wide by 200 pixels tall (or the same x/y ratio but bigger/smaller). A different sized image will be stretched to fit in the designated area. Note: There is no default for this image, so if it does not exist, no image will be displayed.
+
+
+
+
+
+Startup_32x32.gif
+
+This image is displayed in the selector window when you start GameBase. This is the image that identifies your own database. It must be 32 pixels square and have a white (#FFFFFF) transparent background. This image is also used in the GB-Toolbox to represent your database.
+
+
+
+
+
+No_Picture_320x200.gif
+No_Picture_160x100.gif
+
+These images will be displayed when there is no picture available for the currently selected game. The 320x200 image is for when GameBase is in large-picture mode, the 160x100 image is for when GameBase is in small-picture mode (changable via the View menu in the main GameBase window).
+
+
+
+
+
+ListGameHasBoth_16x16.gif
+ListGameHasGame_16x16.gif
+ListGameHasMusic_16x16.gif
+ListGameHasNone_16x16.gif
+ListMusic_16x16.gif
+
+These are the icon images for games and music tunes in the main GameBase list.  All these must have a mask colour of purple #FF00FF (the mask colour is the colour you want to be transparent when the imageis displayed).  You should not save these images as transparent GIFs, as the mask colour (#FF00FF) is used to determinetransparency. All these images must be 16 pixels square.
+
+
+
+
+
+RecentMenuGame_13x13.gif
+RecentMenuMusic_13x13.gif
+
+These are the images that appear in the Recent Menu in the main GameBase window. They must be 13 pixels square and have a transparent colour of white (#FFFFFF).
+
+
+
+
+
+ClassicGame_16x11.gif
+
+This image is displayed in the game details tabs next to the game name, when the game is marked as a Classic. This image must be 16 pixels wide by 11 pixels tall. You can use a transparent GIF for this image.
+
+
+
+
+
+NoPrequel_13x11.gif
+NoSequel_13x11.gif
+NoRelated_13x11.gif
+Related_13x11.gif
+Sequel_13x11.gif
+Prequel_13x11.gif
+
+These are the small images that illustrate whether a game has been assigned a Prequel, Sequel and Related game link.  These images appear in the top-right corner of the game details tabs. They must be 13 pixels wide by 11 pixels tall. You can use transparent GIFs for these images.
+
+
+
+
+
+VeryGoodRating_13x11.gif
+QuiteGoodRating_13x11.gif
+AverageRating_13x11.gif
+PoorRating_13x11.gif
+TerribleRating_13x11.gif
+UnknownRating_13x11.gif
+
+These images appear in the top-right corner of the game details tabs and represent the personal rating you gave the game. They must be 13 pixels wide by 11 pixels tall. You can use transparent GIFs for these images.
+
+
+
+
+
+GameTab1_16x16.gif
+GameTab2_16x16.gif
+GameTab3_16x16.gif
+GameTab4_16x16.gif
+GameTab5_16x16.gif
+MusicTab_16x16.gif
+
+These images are displayed in the caption headers of the game details tabs. They must be 16 pixels square. You can use transparent GIFs for these images.
+
+
+
+
+
+NoPhoto_100x100.gif
+
+This image is displayed when there is no photo selected for a musician. It should be 100 pixels square.
+
+
+
+
+
+PictureDown_15x10.gif
+PictureUp_15x10.gif
+
+These images are displayed in the corners of the game Pictures to tell you that there are more pictures to look at. They must be 15 pixels wide by 10 pixels tall. You can use transparent GIFs for these images.
+  
+
+
+'Gfx\reviewratings' folder
+From v1.3, you can customise the review rating bar by creating (transparent, if desired) GIFs representing each step of 2%, from 0 to 100 (inclusive).  These images should be 11 pixels high (to vertically align with the other icons) but can, if required, be wider than the default in-built 52 pixels: -
+
+0.gif
+2.gif
+4.gif
+...
+...
+98.gif
+100.gif
+
+
+
+'Gfx\quicklinks' folder 
+From v1.3, you can customise the icons in the SideBar by replacing the default GIFs listed below, or by adding additional GIFs named appropriately. All these must have a mask colour of purple #FF00FF (the mask colour is the colour you want to be transparent when the GIF is displayed). You should not save these images as transparent GIFs, as the mask colour (#FF00FF) is used to determine transparency. All these images must be 16x16 pixels: -
+
+_gamelink_cloneof.gif
+This image is shown when the selected game is a "clone" of another game.
+
+_gamelink_prequel.gif
+This image is shown when the selected game has a prequel/precursor linked to it.
+
+_gamelink_related.gif
+This image is shown when the selected game has a related game linked to it.
+
+_gamelink_sequel.gif
+This image is shown when the selected game has a sequel linked to it.
+
+_gamefield_weblink.gif
+This image is shown when the selected game's info-weblink field contains data.
+
+_gamefield_version_weblink.gif
+This image is shown when the selected game's version-weblink field contains data.
+
+_play_game.gif
+This image is shown when the selected game has a game-file linked to it.
+
+_play_music.gif
+This image is shown when the selected game has a music-file linked to it.
+
+_extra_default.gif
+This image is shown when the selected game has a shell-extension-based extra assigned to it.
+
+_extra_gemus.gif
+This image is shown when the selected game has a GEMUS-based extra assigned to it.
+
+_extra_music.gif
+This image is shown when the selected game has a Music-based extra assigned to it.
+
+_extra_url.gif
+This image is shown when the selected game has a URL-based extra assigned to it.
+
+The icons for the all extras can be overridden by name-based icons. For example, if you wanted all extras named "Longplay Video" to have a specific icon, then you simply create one for it called "Longplay Video.gif" 
+
+For all shell-extension-based extras, (not GEMUS/Music/URL extras) you can also create icons based on filename extension (file type). For example, if you wanted all shell-extension-based extras that were video files to share the same icon, you might create one called "avi.mpg.mpeg.mpe.mov.mkv.mp4.vob.rm.flv.swf.wmv.gif". Note: the name-based overrides take priority over filename-extension overrides.
+

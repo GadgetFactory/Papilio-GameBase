@@ -1,0 +1,73 @@
+; unzip the roms
+Add_CLP( -qq -o %gamepathfile% -d %emupath%\PapilioTMP)
+Run_Emulator()
+Clear_CLP()
+
+If Key_hardware CONTAINS(invaders)
+	; build HW_INVADERS (alien invasion, alien invasion 2, space invaders 4, space invaders, space king, super earth invasion set 1, super earth invasion set 2)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %maincpu_value% %maincpu_entity_value% %maincpu_map_value% %maincpu_addrbits_value% %hardware_value% 1||WAIT)
+
+ElseIf Key_hardware CONTAINS(frogger)
+	; build HW
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_lut_value% %rom_lut_entity_value% %rom_lut_map_value% %rom_lut_addrbits_value% %hardware_value% 1||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %maincpu_value% %maincpu_entity_value% %maincpu_map_value% %maincpu_addrbits_value% %hardware_value% 2||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_obj_0_value% %rom_obj_0_entity_value% %rom_obj_0_map_value% %rom_obj_0_addrbits_value% %hardware_value% 3||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_obj_1_value% %rom_obj_1_entity_value% %rom_obj_1_map_value% %rom_obj_1_addrbits_value% %hardware_value% 4||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_0_value% %rom_snd_0_entity_value% %rom_snd_0_map_value% %rom_snd_0_addrbits_value% %hardware_value% 5||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_1_value% %rom_snd_1_entity_value% %rom_snd_1_map_value% %rom_snd_1_addrbits_value% %hardware_value% 6||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_2_value% %rom_snd_2_entity_value% %rom_snd_2_map_value% %rom_snd_2_addrbits_value% %hardware_value% 7||WAIT)
+
+ElseIf Key_hardware CONTAINS(galaxian||mrdonightmare)
+	; build HW
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %maincpu_value% %maincpu_entity_value% %maincpu_map_value% %maincpu_addrbits_value% %hardware_value% 1||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_1h_value% %rom_1h_entity_value% %rom_1h_map_value% %rom_1h_addrbits_value% %hardware_value% 2||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_1k_value% %rom_1k_entity_value% %rom_1k_map_value% %rom_1k_addrbits_value% %hardware_value% 3||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %galaxian_6l_value% %galaxian_6l_entity_value% %galaxian_6l_map_value% %galaxian_6l_addrbits_value% %hardware_value% 4||WAIT)
+
+ElseIf Key_hardware CONTAINS(DISABLEDmrdoDISABLEDnightmareDISABLED)
+	; build HW
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %maincpu_value% %maincpu_entity_value% %maincpu_map_value% %maincpu_addrbits_value% %hardware_value% 1||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_1h_value% %rom_1h_entity_value% %rom_1h_map_value% %rom_1h_addrbits_value% %hardware_value% 2||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_1k_value% %rom_1k_entity_value% %rom_1k_map_value% %rom_1k_addrbits_value% %hardware_value% 3||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %galaxian_6l_value% %galaxian_6l_entity_value% %galaxian_6l_map_value% %galaxian_6l_addrbits_value% %hardware_value% 4||WAIT)
+
+ElseIf Key_hardware CONTAINS(pacman)
+	; build HW
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %prom1_dst_value% %prom1_dst_entity_value% %prom1_dst_map_value% %prom1_dst_addrbits_value% %hardware_value% 1||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %prom4_dst_value% %prom4_dst_entity_value% %prom4_dst_map_value% %prom4_dst_addrbits_value% %hardware_value% 2||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %prom7_dst_value% %prom7_dst_entity_value% %prom7_dst_map_value% %prom7_dst_addrbits_value% %hardware_value% 3||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_gfx1_value% %rom_gfx1_entity_value% %rom_gfx1_map_value% %rom_gfx1_addrbits_value% %hardware_value% 4||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom0_value% %rom0_entity_value% %rom0_map_value% %rom0_addrbits_value% %hardware_value% 5 %rom0_decrypt_ini_value%||WAIT)
+
+ElseIf Key_hardware CONTAINS(scramble)
+	; build HW (amidar, scramble, theend)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_lut_value% %rom_lut_entity_value% %rom_lut_map_value% %rom_lut_addrbits_value% %hardware_value% 1||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %maincpu_value% %maincpu_entity_value% %maincpu_map_value% %maincpu_addrbits_value% %hardware_value% 2||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_obj_0_value% %rom_obj_0_entity_value% %rom_obj_0_map_value% %rom_obj_0_addrbits_value% %hardware_value% 3||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_obj_1_value% %rom_obj_1_entity_value% %rom_obj_1_map_value% %rom_obj_1_addrbits_value% %hardware_value% 4||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_0_value% %rom_snd_0_entity_value% %rom_snd_0_map_value% %rom_snd_0_addrbits_value% %hardware_value% 5||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_1_value% %rom_snd_1_entity_value% %rom_snd_1_map_value% %rom_snd_1_addrbits_value% %hardware_value% 6||WAIT)
+	Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% %rom_snd_2_value% %rom_snd_2_entity_value% %rom_snd_2_map_value% %rom_snd_2_addrbits_value% %hardware_value% 7||WAIT)
+
+ElseIf Key_hardware CONTAINS(a2601)
+	; build HW_ATARI2600
+	Show_Message(Invalid or Unsupported Hardware Type %hardware_value%)
+	; Run_Program(%emupath%\Papilio-Arcade.bat||%emupath% "%maincpu_value%" cart_rom rom_code 14 a2601 1||WAIT)
+Else
+	; Invalid Hardware Type. Display Message
+	Show_Message(Invalid or Unsupported Hardware Type %hardware_value%)
+End If
+
+If Key_hardware CONTAINS(invaders||frogger||galaxian||mrdonightmare||pacman||scramble)
+	; Program the Papilio (temp)
+	Run_Program(%emupath%\papilio-prog.exe||-v -f %emupath%\PapilioTMP\final.bit||WAIT)
+
+	; Program the Papilio (Permanent - not completed)
+	;Run_Program(%emupath%\papilio-prog.exe||-v -f %emupath%\PapilioTMP\final.bit -b %emupath%\bscanSPI\bscan_spi_xc3s500e.bit -sa||WAIT)
+	;Run_Program(%emupath%\papilio-prog.exe||-v -r||WAIT)
+	;Run_Program(%emupath%\papilio-prog.exe||-v -j||WAIT)
+
+	; Clean up the temp directory (we dont use default because you never know where the user may have their tmp path set to)
+	Run_Program(%emupath%\Cleanup_PapilioTMP.bat||||WAIT)
+End If
+
